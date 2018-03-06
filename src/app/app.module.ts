@@ -17,6 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { FireDataServiceProvider } from '../providers/fire-data-service/fire-data-service';
+import { RestaurantPage } from '../pages/restaurant/restaurant';
 
 var config = {
   apiKey: "AIzaSyBhLF5TTgRrUqKM7khVRi-cqPJ6RYFRivI",
@@ -35,7 +37,8 @@ var config = {
     HomePage,
     TabsPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    RestaurantPage
   ],
   imports: [
     BrowserModule,
@@ -52,13 +55,15 @@ var config = {
     HomePage,
     TabsPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    RestaurantPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AuthServiceProvider
+    AuthServiceProvider,
+    FireDataServiceProvider
   ]
 })
 export class AppModule { }
